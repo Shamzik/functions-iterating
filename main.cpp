@@ -22,5 +22,7 @@ int main(int argc, char* argv[]) {
     );
 //    auto processor = Processor<MultiplicityChecker>();
     auto processor = Processor<LoggerCallback, MultiplicityChecker>();
-    processor.Process(queue, WithMultiplicity(LinearFunction(100'000'000, 100'000'000)));
+    processor.Process(
+        queue, WithMultiplicity(LinearFunction(100'000'000, 100'000'000))
+    );
 }
